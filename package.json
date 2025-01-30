@@ -52,7 +52,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "jsep": "^1.2.0"
+    "jsep": "^1.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

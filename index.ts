@@ -57,6 +57,7 @@ export default class ExpressionEval {
   // Default operator precedence from https://github.com/EricSmekens/jsep/blob/master/src/jsep.js#L55
   static DEFAULT_PRECEDENCE: Record<string, number> = {
     '||': 1,
+    '??': 1,
     '&&': 2,
     '|': 3,
     '^': 4,
@@ -81,6 +82,7 @@ export default class ExpressionEval {
 
   static binops: Record<string, binaryCallback> = {
     '||': function (a, b) { return a || b; },
+    '??': function (a, b) { return a ?? b; },
     '&&': function (a, b) { return a && b; },
     '|': function (a, b) { return a | b; },
     '^': function (a, b) { return a ^ b; },
